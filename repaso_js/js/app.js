@@ -1,10 +1,32 @@
-//Object Literal Enhacement
-const banda = "Metallica";
-const genero = "Heavy Metal";
-const canciones = ["Master of Puppets", "Seek & Destroy", "Enter Sandman"];
+//Funciones en un objeto
+const carrito = ['Producto 1','Producto 2','Producto 3'];
+console.log(carrito);
 
-const metallica = { banda, genero, canciones };
+//Forma clasica de hacerlo
+/*const appContenedor = document.querySelector('#app');
 
-console.log(metallica);
+let html = '';
+carrito.forEach(producto => {
+  html += `<li>${producto}</li>`
+})*/
 
-//Nota del Usuario: El Objetc Literal Enhacement funciona para agrupar los valores de distintas variables en un solo arreglo o respuesta.
+//Forma a estilo Map
+carrito.map(producto => {
+  return 'El producto es ' + producto;
+});
+
+//Nota del Usuario (Parte 1): El map, conserva el arreglo original y devuelve un nuevo arreglo.
+
+//Forma clasica
+const persona = {
+  nombre: 'Jorge',
+  profesion: 'Desarrollador web',
+  edad: '500'
+}
+const {nombre} = persona;
+console.log(nombre);
+
+//Forma con Objects Keys
+console.log(Object.keys(persona));
+
+//Nota del Usuario (Parte 1):
