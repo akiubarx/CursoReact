@@ -1,10 +1,13 @@
 //Modulos ES6
-const nombreTarea = 'Pasear al perro';
-const tarea = 'tarea';
+export const nombreTarea = 'Pasear al perro';
 
-export default {
-  nombre: nombreTarea,
-  tarea: tarea
+
+export const crearTarea = (tarea, urgencia) => {
+  return `La tarea ${tarea} tiene una urgencia de ${urgencia}`;
+}
+
+export const tareaCompletada = () => {
+  console.log(`La tarea se completo`);
 }
 
 //Definimos la Clase
